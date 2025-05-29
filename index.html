@@ -10,7 +10,7 @@
 <body>
     <header class="main-header">
         <div class="header-left">
-            <img src="campo.png" alt="Representação do Campo" class="circular-img">
+            <img src="https://via.placeholder.com/60/556B2F/FFFFFF?text=Campo" alt="Representação do Campo" class="circular-img">
             <div class="site-info">
                 <h1>Agro Turismo</h1>
                 <p>O site de turismo agrícola</p>
@@ -63,65 +63,93 @@
 
     <main class="main-content">
         <section class="tourist-spot">
-            <img src="fazenda-verde.jpg" alt="Fazenda Verde">
+            <img src="https://via.placeholder.com/400x300/8FBC8F/FFFFFF?text=Fazenda+Verde" alt="Fazenda Verde">
             <div class="spot-info">
                 <h2>Fazenda Verde</h2>
                 <p><strong>Local:</strong> Minas Gerais, Brasil</p>
                 <p><strong>Características da Viagem:</strong> Visita a plantações orgânicas, degustação de queijos artesanais, passeio a cavalo e contato com a natureza.</p>
-                <p>Ideal para quem busca tranquilidade e experiências autênticas no campo. Hospedagem em charmosas pousadas rurais.</p>
+                <button class="buy-button" data-spot="fazenda-verde">Comprar</button>
             </div>
         </section>
 
         <section class="tourist-spot">
-            <img src="vinicola-serra.jpg" alt="Vinícola da Serra">
+            <img src="https://via.placeholder.com/400x300/6B8E23/FFFFFF?text=Vinicola+Serra" alt="Vinícola da Serra">
             <div class="spot-info">
                 <h2>Vinícola da Serra</h2>
                 <p><strong>Local:</strong> Vale dos Vinhedos, Rio Grande do Sul</p>
                 <p><strong>Características da Viagem:</strong> Tour pelas parreiras, processo de fabricação de vinhos, degustação de diferentes rótulos e harmonizações.</p>
-                <p>Uma experiência completa para amantes de vinho, com paisagens deslumbrantes e a rica cultura da região.</p>
+                <button class="buy-button" data-spot="vinicola-serra">Comprar</button>
             </div>
         </section>
 
         <section class="tourist-spot">
-            <img src="sitio-colheita.jpg" alt="Sítio da Colheita">
+            <img src="https://via.placeholder.com/400x300/ADD8E6/000000?text=Sitio+Colheita" alt="Sítio da Colheita">
             <div class="spot-info">
                 <h2>Sítio da Colheita</h2>
                 <p><strong>Local:</strong> Interior de São Paulo</p>
                 <p><strong>Características da Viagem:</strong> Colheita de frutas da estação, oficinas de geleias e doces caseiros, piquenique em pomares.</p>
-                <p>Perfeito para famílias com crianças, oferecendo atividades interativas e a oportunidade de aprender sobre o cultivo.</p>
+                <button class="buy-button" data-spot="sitio-colheita">Comprar</button>
             </div>
         </section>
 
         <section class="tourist-spot">
-            <img src="pousada-montanha.jpg" alt="Pousada da Montanha">
+            <img src="https://via.placeholder.com/400x300/DDA0DD/FFFFFF?text=Pousada+Montanha" alt="Pousada da Montanha">
             <div class="spot-info">
                 <h2>Pousada da Montanha</h2>
                 <p><strong>Local:</strong> Serra Catarinense, Santa Catarina</p>
                 <p><strong>Características da Viagem:</strong> Trilhas ecológicas, observação de pássaros, culinária típica da serra, noites estreladas.</p>
-                <p>Refúgio para quem busca aventura e conexão com a natureza em meio a paisagens montanhosas.</p>
+                <button class="buy-button" data-spot="pousada-montanha">Comprar</button>
             </div>
         </section>
 
         <section class="tourist-spot">
-            <img src="engenho-cana.jpg" alt="Engenho de Cana">
+            <img src="https://via.placeholder.com/400x300/BDB76B/FFFFFF?text=Engenho+Cana" alt="Engenho de Cana">
             <div class="spot-info">
                 <h2>Engenho da Cana</h2>
                 <p><strong>Local:</strong> Pernambuco</p>
                 <p><strong>Características da Viagem:</strong> Visita a engenhos históricos, produção de rapadura e cachaça, cavalhada e festas regionais.</p>
-                <p>Mergulho na cultura nordestina, com sabores e tradições que remetem ao passado colonial.</p>
+                <button class="buy-button" data-spot="engenho-cana">Comprar</button>
             </div>
         </section>
 
         <section class="tourist-spot">
-            <img src="horta-organica.jpg" alt="Horta Orgânica Urbana">
+            <img src="https://via.placeholder.com/400x300/C0C0C0/000000?text=Horta+Organica" alt="Horta Orgânica Urbana">
             <div class="spot-info">
                 <h2>Horta Orgânica Urbana</h2>
                 <p><strong>Local:</strong> Próximo a grandes centros urbanos</p>
                 <p><strong>Características da Viagem:</strong> Workshops de jardinagem orgânica, preparo de refeições com ingredientes frescos, troca de experiências.</p>
-                <p>Uma opção inovadora para quem quer aprender sobre sustentabilidade e ter um contato breve com o campo, mesmo na cidade.</p>
+                <button class="buy-button" data-spot="horta-organica">Comprar</button>
             </div>
         </section>
     </main>
+
+    <div class="purchase-modal" id="purchase-modal">
+        <div class="modal-content">
+            <span class="close-button" id="close-purchase-modal">&times;</span>
+            <h2 id="modal-spot-title">Detalhes da Viagem</h2>
+            <div class="modal-details">
+                <p><strong>Preço:</strong> <span id="modal-price"></span></p>
+                <p><strong>Meio de Locomoção:</strong> <span id="modal-transport"></span></p>
+                <p><strong>Informações Adicionais:</strong> <span id="modal-additional-info"></span></p>
+            </div>
+            <h3>Seus Dados Pessoais</h3>
+            <form id="personal-data-form">
+                <label for="full-name">Nome Completo:</label>
+                <input type="text" id="full-name" name="fullName" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00" required>
+
+                <label for="rg">RG:</label>
+                <input type="text" id="rg" name="rg" required>
+
+                <button type="submit">Confirmar Compra</button>
+            </form>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
