@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Turismo - O site de turismo agrícola</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-left">
+            <img src="campo.png" alt="Representação do Campo" class="circular-img">
+            <div class="site-info">
+                <h1>Agro Turismo</h1>
+                <p>O site de turismo agrícola</p>
+            </div>
+        </div>
+        <div class="header-center">
+            <h1>Agro Turismo</h1>
+        </div>
+        <div class="header-right">
+            <div class="icon-wrapper">
+                <i class="fas fa-user-circle" id="account-icon"></i>
+                <div class="account-dropdown" id="account-dropdown">
+                    <p id="logout-option">Sair da conta</p>
+                    <p id="manage-account-option">Gerenciar sua conta</p>
+                </div>
+            </div>
+            <div class="icon-wrapper search-wrapper">
+                <i class="fas fa-search" id="search-icon"></i>
+                <input type="text" placeholder="Pesquisar..." class="search-bar" id="search-bar">
+            </div>
+            <div class="icon-wrapper">
+                <i class="fas fa-cog" id="settings-icon"></i>
+                <div class="settings-dropdown" id="settings-dropdown">
+                    <p>Configuração 1</p>
+                    <p>Configuração 2</p>
+                    <p>Configuração 3</p>
+                </div>
+            </div>
+            <div class="icon-wrapper">
+                <i class="fas fa-plus" id="plus-icon"></i>
+                <div class="publish-trip-modal" id="publish-trip-modal">
+                    <h2>Publicar Nova Viagem</h2>
+                    <form id="publish-trip-form">
+                        <label for="trip-title">Título da Viagem:</label>
+                        <input type="text" id="trip-title" name="trip-title" required>
+
+                        <label for="trip-description">Descrição:</label>
+                        <textarea id="trip-description" name="trip-description" rows="4" required></textarea>
+
+                        <label for="trip-location">Localização:</label>
+                        <input type="text" id="trip-location" name="trip-location" required>
+
+                        <button type="submit">Publicar</button>
+                        <button type="button" id="close-publish-modal">Cancelar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="tourist-spot">
+            <img src="fazenda-verde.jpg" alt="Fazenda Verde">
+            <div class="spot-info">
+                <h2>Fazenda Verde</h2>
+                <p><strong>Local:</strong> Minas Gerais, Brasil</p>
+                <p><strong>Características da Viagem:</strong> Visita a plantações orgânicas, degustação de queijos artesanais, passeio a cavalo e contato com a natureza.</p>
+                <p>Ideal para quem busca tranquilidade e experiências autênticas no campo. Hospedagem em charmosas pousadas rurais.</p>
+            </div>
+        </section>
+
+        <section class="tourist-spot">
+            <img src="vinicola-serra.jpg" alt="Vinícola da Serra">
+            <div class="spot-info">
+                <h2>Vinícola da Serra</h2>
+                <p><strong>Local:</strong> Vale dos Vinhedos, Rio Grande do Sul</p>
+                <p><strong>Características da Viagem:</strong> Tour pelas parreiras, processo de fabricação de vinhos, degustação de diferentes rótulos e harmonizações.</p>
+                <p>Uma experiência completa para amantes de vinho, com paisagens deslumbrantes e a rica cultura da região.</p>
+            </div>
+        </section>
+
+        <section class="tourist-spot">
+            <img src="sitio-colheita.jpg" alt="Sítio da Colheita">
+            <div class="spot-info">
+                <h2>Sítio da Colheita</h2>
+                <p><strong>Local:</strong> Interior de São Paulo</p>
+                <p><strong>Características da Viagem:</strong> Colheita de frutas da estação, oficinas de geleias e doces caseiros, piquenique em pomares.</p>
+                <p>Perfeito para famílias com crianças, oferecendo atividades interativas e a oportunidade de aprender sobre o cultivo.</p>
+            </div>
+        </section>
+
+        <section class="tourist-spot">
+            <img src="pousada-montanha.jpg" alt="Pousada da Montanha">
+            <div class="spot-info">
+                <h2>Pousada da Montanha</h2>
+                <p><strong>Local:</strong> Serra Catarinense, Santa Catarina</p>
+                <p><strong>Características da Viagem:</strong> Trilhas ecológicas, observação de pássaros, culinária típica da serra, noites estreladas.</p>
+                <p>Refúgio para quem busca aventura e conexão com a natureza em meio a paisagens montanhosas.</p>
+            </div>
+        </section>
+
+        <section class="tourist-spot">
+            <img src="engenho-cana.jpg" alt="Engenho de Cana">
+            <div class="spot-info">
+                <h2>Engenho da Cana</h2>
+                <p><strong>Local:</strong> Pernambuco</p>
+                <p><strong>Características da Viagem:</strong> Visita a engenhos históricos, produção de rapadura e cachaça, cavalhada e festas regionais.</p>
+                <p>Mergulho na cultura nordestina, com sabores e tradições que remetem ao passado colonial.</p>
+            </div>
+        </section>
+
+        <section class="tourist-spot">
+            <img src="horta-organica.jpg" alt="Horta Orgânica Urbana">
+            <div class="spot-info">
+                <h2>Horta Orgânica Urbana</h2>
+                <p><strong>Local:</strong> Próximo a grandes centros urbanos</p>
+                <p><strong>Características da Viagem:</strong> Workshops de jardinagem orgânica, preparo de refeições com ingredientes frescos, troca de experiências.</p>
+                <p>Uma opção inovadora para quem quer aprender sobre sustentabilidade e ter um contato breve com o campo, mesmo na cidade.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

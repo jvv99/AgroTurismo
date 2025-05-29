@@ -1,0 +1,332 @@
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #556B2F; /* Verde escuro do campo */
+    padding: 15px 30px;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-left,
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espaço entre os elementos */
+}
+
+.header-left .circular-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+}
+
+.header-left .site-info h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+.header-left .site-info p {
+    margin: 0;
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+.header-center h1 {
+    margin: 0;
+    font-size: 2.2em;
+    text-align: center;
+}
+
+.header-right .icon-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.header-right i {
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.header-right i:hover {
+    color: #DDA0DD; /* Cor mais clara para hover */
+}
+
+/* Dropdowns e Modais */
+.account-dropdown,
+.settings-dropdown {
+    position: absolute;
+    top: 120%; /* Abaixo do ícone */
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 150px;
+    z-index: 10;
+    display: none; /* Escondido por padrão */
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.account-dropdown p,
+.settings-dropdown p {
+    padding: 8px 15px;
+    margin: 0;
+    color: #333;
+    cursor: pointer;
+}
+
+.account-dropdown p:hover,
+.settings-dropdown p:hover {
+    background-color: #f0f0f0;
+}
+
+/* Barra de Pesquisa */
+.search-wrapper {
+    position: relative;
+}
+
+.search-bar {
+    border: none;
+    padding: 8px 10px;
+    border-radius: 20px;
+    outline: none;
+    width: 0; /* Escondida por padrão */
+    transition: width 0.3s ease, padding 0.3s ease;
+    opacity: 0;
+    margin-left: 10px;
+}
+
+.search-bar.active {
+    width: 200px; /* Expandida */
+    padding: 8px 15px;
+    opacity: 1;
+}
+
+/* Modal de Publicação */
+.publish-trip-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    display: none; /* Escondido por padrão */
+    max-width: 500px;
+    width: 90%;
+}
+
+.publish-trip-modal h2 {
+    margin-top: 0;
+    color: #556B2F;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.publish-trip-modal form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.publish-trip-modal label {
+    font-weight: bold;
+    color: #556B2F;
+}
+
+.publish-trip-modal input[type="text"],
+.publish-trip-modal textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    width: calc(100% - 22px); /* Ajusta o padding */
+}
+
+.publish-trip-modal button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+.publish-trip-modal button[type="submit"] {
+    background-color: #8FBC8F; /* Verde claro */
+    color: white;
+}
+
+.publish-trip-modal button[type="submit"]:hover {
+    background-color: #6B8E23; /* Verde um pouco mais escuro */
+}
+
+.publish-trip-modal button#close-publish-modal {
+    background-color: #ccc;
+    color: #333;
+}
+
+.publish-trip-modal button#close-publish-modal:hover {
+    background-color: #bbb;
+}
+
+/* Conteúdo Principal (Viagens) */
+.main-content {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.tourist-spot {
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.tourist-spot:hover {
+    transform: translateY(-5px);
+}
+
+.tourist-spot img {
+    width: 40%;
+    height: 300px; /* Altura fixa para as imagens */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.spot-info {
+    padding: 20px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.spot-info h2 {
+    color: #556B2F;
+    margin-top: 0;
+    font-size: 1.8em;
+}
+
+.spot-info p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.spot-info p strong {
+    color: #6B8E23;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .main-header {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .header-left,
+    .header-right,
+    .header-center {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .header-left {
+        order: 1; /* Para manter a imagem e nome no topo */
+    }
+
+    .header-center {
+        order: 3;
+    }
+
+    .header-right {
+        order: 2;
+        margin-top: 10px;
+    }
+
+    .tourist-spot {
+        flex-direction: column;
+    }
+
+    .tourist-spot img {
+        width: 100%;
+        height: 250px;
+        border-radius: 10px 10px 0 0; /* Apenas topo arredondado */
+    }
+
+    .spot-info {
+        width: auto;
+        border-radius: 0 0 10px 10px; /* Apenas base arredondada */
+    }
+
+    .search-bar.active {
+        width: 150px;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-header {
+        padding: 10px 15px;
+    }
+
+    .header-left .circular-img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .header-left .site-info h1 {
+        font-size: 1.5em;
+    }
+
+    .header-left .site-info p {
+        font-size: 0.8em;
+    }
+
+    .header-center h1 {
+        font-size: 1.8em;
+    }
+
+    .header-right i {
+        font-size: 1.3em;
+    }
+
+    .search-bar.active {
+        width: 120px;
+    }
+
+    .spot-info h2 {
+        font-size: 1.5em;
+    }
+
+    .spot-info p {
+        font-size: 1em;
+    }
+}
